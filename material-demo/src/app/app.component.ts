@@ -30,5 +30,9 @@ export class AppComponent {
   logs(state) {
     console.log(state);
   }
+
+  logChange(index) {
+    console.log(index);
+  }
 }
 

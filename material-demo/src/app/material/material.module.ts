@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule, MatButtonToggleModule, MatIconModule, MatProgressSpinnerModule, MatToolbarModule,
-  MatSidenavModule, MatMenuModule
+  MatSidenavModule, MatMenuModule, MatListModule, MatDividerModule, MatGridListModule, MatExpansionModule,
+  MatCardModule, MatTabsModule, MatStepperModule
 } from '@angular/material';
 import { MatBadgeModule } from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +15,14 @@ const material = [
   MatToolbarModule,
   MatSidenavModule,
   MatMenuModule,
-  FormsModule
+  FormsModule,
+  MatListModule,
+  MatDividerModule, 
+  MatGridListModule,
+  MatExpansionModule,
+  MatCardModule,
+  MatTabsModule,
+  MatStepperModule
 ];
 
 @NgModule({

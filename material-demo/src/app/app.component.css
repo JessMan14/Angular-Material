@@ -14,7 +14,7 @@ span {
     padding-right: 1rem;
 } */
 
-mat-sidenav-container {
+/* mat-sidenav-container {
     height: 100%;
 }
 
@@ -29,4 +29,8 @@ mat-sidenav {
 
 .center {
     margin: 10rem;
-}
+} */
+
+/* mat-grid-tile {
+    background-color: lightblue;
+} */

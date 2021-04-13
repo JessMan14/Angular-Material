@@ -133,14 +133,15 @@
   </mat-sidenav-container>
 </div> -->
 
+
 <!--Menu-->
-<mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+<!-- <mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
  <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
  <button mat-menu-item>BackEnd</button>
 </mat-menu>
-<button class="center" mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+<button class="center" mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button> -->
 <!--SubMenu-->
-<mat-menu #subMenu="matMenu">
+<!-- <mat-menu #subMenu="matMenu">
   <button mat-menu-item>Angular</button>
   <button mat-menu-item>React</button>
   <button mat-menu-item>Vue</button>
@@ -166,4 +167,141 @@
   [matMenuTriggerFor]="lazyMenu"
  >
   CodeEvolution
-</button>
+</button> -->
+
+<!--List-->
+<!-- <div>
+  <mat-list dense>
+    <mat-list-item>Item1</mat-list-item>
+    <mat-list-item>Item2</mat-list-item>
+    <mat-list-item>Item3</mat-list-item>
+  </mat-list>
+
+  <mat-nav-list>
+    <a mat-list-item href="#">Home</a>
+    <a mat-list-item href="#">About</a>
+    <a mat-list-item href="#">Services</a>
+  </mat-nav-list>
+</div> -->
+
+  <!-- <mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>home</mat-icon>
+      <h3 matLine>Heading</h3>
+      <p matLine>Line</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine>Heading 2</h3>
+      <p matLine>Line 2</p>
+    </mat-list-item>
+  </mat-list> -->
+
+  <!--Grids-->
+      <!-- <mat-grid-list cols="2" rowHeight="100px"> -->
+      <!-- <mat-grid-list cols="2" rowHeight="2:1"> -->
+      <!-- <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile> -->
+  <!-- <div>
+    <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="10px">
+      <mat-grid-tile >Tile 1</mat-grid-tile>
+      <mat-grid-tile>Tile 2</mat-grid-tile>
+      <mat-grid-tile>Tile 3</mat-grid-tile>
+      <mat-grid-tile>Tile 4</mat-grid-tile>
+    </mat-grid-list>
+  </div> -->
+
+  <!--Expansion Panel-->
+  <!-- <div>
+    <mat-accordion multi="true" hideToggle>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Angular Fundamentals
+          </mat-panel-title>
+          <mat-panel-description>
+            Total duration: 3 hours
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add course details</p>
+        <mat-action-row>
+          <button mat-button>Enroll</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Angular Material
+          </mat-panel-title>
+          <mat-panel-description>
+            Total duration: 2 hours
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add course details</p>
+        <mat-action-row>
+          <button mat-button>Enroll</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div> -->
+
+  <!--Cards-->
+  <!-- <div>
+    <mat-card>
+      <mat-card-title>
+        Card title
+      </mat-card-title>
+      <mat-card-content>
+        This is the card content
+      </mat-card-content>
+      <mat-card-actions align="end">
+        <button mat-flat-button>Login</button>
+      </mat-card-actions>
+    </mat-card>
+  </div> -->
+
+  <!--Tabs-->
+  <!-- <div>
+    <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)">
+      <mat-tab label="Angular">Angular Content</mat-tab>
+      <mat-tab label="React">React Content</mat-tab>
+      <mat-tab label="Vue">View Content</mat-tab>
+    </mat-tab-group>
+    {{tabRef.selectedIndex}}
+  </div> -->
+
+  <!--Stepper-->
+  <div>
+    <mat-horizontal-stepper linear>
+      <mat-step label="Shipping Address" completed="true">
+        <p>Shipping Address Details</p>
+      </mat-step>
+      <mat-step label="Billing Address" completed="false" optional>
+        <p>Billing Address Details</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Place Order" completed="false">
+        <p>Order Details</p>
+      </mat-step>
+    </mat-horizontal-stepper>
+
+    <mat-vertical-stepper linear>
+      <mat-step label="Shipping Address" completed="true">
+        <p>Shipping Address Details</p>
+      </mat-step>
+      <mat-step label="Billing Address" completed="false" optional>
+        <p>Billing Address Details</p>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step label="Place Order" completed="false">
+        <p>Order Details</p>
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
