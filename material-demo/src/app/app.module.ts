@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component'; 
+import { ScrollingModule } from '@angular/cdk/scrolling';
  
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

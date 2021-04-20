@@ -415,12 +415,12 @@
   <button mat-raised-button (click)="openDialog()">Open Dialog</button>
 </div> -->
 
-<!--Date Table: Exporing, filtering, sorting-->
-<div>
+<!--Date Table: Exporing, filtering, sorting, pagination-->
+<!-- <div class="mat-elevation-z8">
   <mat-form-field appearance="legacy">
     <input (keyup)="applyFilter($event.target.value)" matInput placeholder="Filter">
   </mat-form-field>
-  <mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" matSort>
 
     <ng-container matColumnDef="position">
       <mat-header-cell *matHeaderCellDef mat-sort-header> No. </mat-header-cell>
@@ -445,4 +445,14 @@
     <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
     <mat-row (click)="logData(row)" *matRowDef="let row; columns: displayedColumns;"></mat-row>
   </mat-table>
-</div>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+</div> -->
+
+<!--Virtual Scrolling-->
+<cdk-virtual-scroll-viewport itemSize="100" class="container">
+  <div *cdkVirtualFor="let number of numbers" class="number">
+    {{number}}
+  </div>
+</cdk-virtual-scroll-viewport>
+
+

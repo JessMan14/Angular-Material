@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { filter, map, startWith } from 'rxjs/operators';
-import { MatSnackBar, MatSnackBarModule, MatDialog, MatTableDataSource } from '@angular/material';
+import { MatSnackBar, MatSnackBarModule, MatDialog, MatTableDataSource, MatPaginator } from '@angular/material';
 import { MatSort} from '@angular/material/sort';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
@@ -65,9 +65,14 @@ export class AppComponent implements OnInit{
   //dataSource = ELEMENT_DATA;
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   @ViewChild(MatSort, {static: true}) sort: MatSort;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+
+  numbers = [];
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {
-
+    for (let i=0; i < 1000; i++) {
+      this.numbers.push(i);
+    }
   }
 
   ngOnInit() {
@@ -77,6 +82,7 @@ export class AppComponent implements OnInit{
     );
 
     this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 
   private _filter(value: string): string[] {
