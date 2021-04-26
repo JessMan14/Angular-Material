@@ -51,3 +51,49 @@ table {
 .container {
     height: 400px;
 }
+
+.graph-container {
+    display: flex;
+}
+
+.background {
+    height: 650 px;  
+    color: #fff;
+    background-image: url("../images/mexico.jpg");  
+    background-size: 100% ;  
+    background-size: cover;  
+}
+
+
+.graph-container-child {
+    /* flex: 1; */
+    border: 2px solid lightgray;
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  
+  .item1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+
+  .item2 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }

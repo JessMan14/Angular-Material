@@ -14,6 +14,13 @@ export interface PeriodicElement {
   symbol: string;
 }
 
+export interface Tile {
+  color: string;
+  cols: number;
+  rows: number;
+  text: string;
+}
+
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
   {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
@@ -68,6 +75,15 @@ export class AppComponent implements OnInit{
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
   numbers = [];
+
+  tiles: Tile[] = [
+    {text: 'One', cols: 1, rows: 2, color: 'lightblue'},
+    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
+    {text: 'Three', cols: 1, rows: 2, color: 'lightpink'},
+    {text: 'Four', cols: 1, rows: 2, color: '#DDBDF1'},
+    {text: 'Five', cols: 1, rows: 2, color: "Blue"},
+    {text: 'Six', cols: 1, rows: 2, color: 'yellow'},
+  ];
 
   constructor(private snackBar: MatSnackBar, public dialog: MatDialog) {
     for (let i=0; i < 1000; i++) {

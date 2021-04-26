@@ -203,13 +203,61 @@
       <!-- <mat-grid-list cols="2" rowHeight="2:1"> -->
       <!-- <mat-grid-tile rowspan="2">Tile 1</mat-grid-tile> -->
   <!-- <div>
-    <mat-grid-list cols="2" rowHeight="fit" style="height: 200px" gutterSize="10px">
-      <mat-grid-tile >Tile 1</mat-grid-tile>
-      <mat-grid-tile>Tile 2</mat-grid-tile>
-      <mat-grid-tile>Tile 3</mat-grid-tile>
-      <mat-grid-tile>Tile 4</mat-grid-tile>
+    <mat-grid-list cols="4" rowHeight="fit" style="height: 700px;" gutterSize="10px">
+      <mat-grid-tile style="background-color: darkcyan;">Tile 1
+        <div style="padding-left: 20px;">
+          <button mat-button mat-raised-button color="accent">Click me!</button>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile colspan="2" rowspan="2" style="background-color: lightblue;">Tile 2
+        <div style="padding-left: 20px;">
+        <mat-card>
+          <mat-card-title>
+            Card title
+          </mat-card-title>
+          <mat-card-content>
+            This is the card content
+          </mat-card-content>
+          <mat-card-actions align="end">
+            <button mat-flat-button>Login</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      </mat-grid-tile>
+      <mat-grid-tile style="background-color: darkkhaki;">Tile 3
+        <div style="padding-left:  20px;">
+          <span matBadge="5" matBadgePosition="above after">Notifications</span>
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile style="background-color: mediumpurple;">Tile 4
+      <div style="padding-left: 20;">
+        <mat-list-item>
+          <mat-icon matListIcon>home</mat-icon>
+          <h3 matLine>Heading</h3>
+          <p matLine>Line</p>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <mat-icon matListIcon>folder</mat-icon>
+          <h3 matLine>Heading 2</h3>
+          <p matLine>Line 2</p>
+        </mat-list-item>
+      </div>
+      </mat-grid-tile>
     </mat-grid-list>
   </div> -->
+
+  <!-- <mat-grid-list cols="3" rowHeight="200px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+</div> -->
+  
 
   <!--Expansion Panel-->
   <!-- <div>
@@ -449,10 +497,43 @@
 </div> -->
 
 <!--Virtual Scrolling-->
-<cdk-virtual-scroll-viewport itemSize="100" class="container">
+<!-- <cdk-virtual-scroll-viewport itemSize="100" class="container">
   <div *cdkVirtualFor="let number of numbers" class="number">
     {{number}}
   </div>
-</cdk-virtual-scroll-viewport>
+</cdk-virtual-scroll-viewport> -->
 
+
+<div class="background">
+  <div class="graph-container">
+    <div class="graph-container-child"  style="width: 20%; height: 700px;">
+    </div>
+    <div class="graph-container-child"  style="width: 60%; height: 700px;">
+      <div class="graph-container">
+        <div class="graph-container-child"  style="width: 100%; height: 200px; background-color: mediumorchid;">
+        </div>
+      </div>
+      <div class="graph-container">
+        <div class="graph-container-child"  style="width: 50%; height: 200px; background-color: lightblue;">
+        </div>
+        <div class="graph-container-child"  style="width: 50%; height: 200px; background-color: lightblue;">
+          
+        </div>
+      </div>
+    </div>
+    <div class="graph-container-child"  style="width: 30%; height: 700px;">
+      <div class="graph-container-child"  style="width: 90%; height: 200px; background-color: mediumorchid;">
+      </div>
+      <div class="graph-container-child"  style="width: 90%; height: 200px; background-color: mediumorchid;">
+      </div>
+      <div class="graph-container-child"  style="width: 90%; height: 200px; background-color: mediumorchid;">
+      </div>
+    </div>
+
+    <div class="graph-container-child"  style="width: 10%; height: 700px;">
+
+    </div>
+
+  </div>
+</div>
 
