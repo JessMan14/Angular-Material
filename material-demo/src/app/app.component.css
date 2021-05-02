@@ -6,10 +6,10 @@
     margin: 3rem;
 } */
 
-/* .navbar {
+.navbar {
     justify-content: space-between;
 }
-
+/*
 span {
     padding-right: 1rem;
 } */
@@ -63,6 +63,17 @@ table {
     background-size: 100% ;  
     background-size: cover;  
 }
+
+.bg {
+    /* The image used */
+    background-image: url("../images/mexico.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
 
 .graph-container-child {

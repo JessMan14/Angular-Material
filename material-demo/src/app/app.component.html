@@ -504,7 +504,9 @@
 </cdk-virtual-scroll-viewport> -->
 
 
-<div class="background">
+
+<!--dev work-->
+<!-- <div class="background">
   <div class="graph-container">
     <div class="graph-container-child"  style="width: 20%; height: 700px;">
     </div>
@@ -535,5 +537,65 @@
     </div>
 
   </div>
+</div> -->
+
+
+
+
+<div class="bg">
+  <div class="graph-container">
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="opened">Sidenav</mat-sidenav>
+      <mat-sidenav-content>
+        <!-- <button (click)="opened=!opened">Toogle Opened</button> -->
+
+      </mat-sidenav-content>
+
+    </mat-sidenav-container>
+
+    <mat-toolbar color="primary" class="navbar">
+      <div (click)="opened=!opened">CodeEvolution</div>
+        <div>
+          <span>Home</span>
+          <span>About</span>
+          <span>Services</span>
+        </div>
+    </mat-toolbar>
+
+    
+  </div>
+
+  <div class="graph-container"> 
+    <div class="graph-container-child"  style="width: 20%; height: 700px;">
+    </div>
+    <div class="graph-container-child"  style="width: 60%; height: 700px;">
+      <div class="graph-container">
+        <div class="graph-container-child"  style="width: 100%; height: 200px; background-color: mediumorchid;">
+        </div>
+      </div>
+      <div class="graph-container">
+        <div class="graph-container-child"  style="width: 50%; height: 200px; background-color: lightblue;">
+        </div>
+        <div class="graph-container-child"  style="width: 50%; height: 200px; background-color: lightblue;">
+          
+        </div>
+      </div>
+    </div>
+    <div class="graph-container-child"  style="width: 30%; height: 700px;">
+      <div class="graph-container-child"  style="width: 90%; height: 200px; background-color: mediumorchid;">
+      </div>
+      <div class="graph-container-child"  style="width: 90%; height: 200px; background-color: mediumorchid;">
+      </div>
+      <div class="graph-container-child"  style="width: 90%; height: 200px; background-color: mediumorchid;">
+      </div>
+    </div>
+
+    <div class="graph-container-child"  style="width: 10%; height: 700px;">
+
+    </div>
+  </div>
+  
 </div>
+
+
 
